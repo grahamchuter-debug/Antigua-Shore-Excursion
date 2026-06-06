@@ -1,0 +1,13 @@
+{
+  "name": "antigua-shore-excursion",
+  "private": true,
+  "scripts": {
+    "build": "python3 scripts/build-antigua-site.py",
+    "images": "python3 scripts/fetch-antigua-images.py",
+    "deploy": "wrangler deploy",
+    "preview": "python3 -m http.server 8907"
+  },
+  "devDependencies": {
+    "wrangler": "^4.94.0"
+  }
+}
