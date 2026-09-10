@@ -1,3 +1,8 @@
 node_modules/
+.wrangler/
+.css-cache/
+__pycache__/
+*.pyc
 .DS_Store
-*.log
+css/utilities.css
+_legacy_phase15a/

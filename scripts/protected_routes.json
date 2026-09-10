@@ -1,0 +1,113 @@
+{
+  "domain": "https://antiguashoreexcursion.com",
+  "phase": "15B",
+  "canonical_policy": "trailing-slash-extensionless-on-apex",
+  "routes": [
+    {
+      "path": "/",
+      "file": "index.html",
+      "kind": "home"
+    },
+    {
+      "path": "/best-antigua-shore-excursions/",
+      "file": "best-antigua-shore-excursions/index.html",
+      "kind": "hub"
+    },
+    {
+      "path": "/antigua-port-guide/",
+      "file": "antigua-port-guide/index.html",
+      "kind": "guide"
+    },
+    {
+      "path": "/one-day-in-antigua-from-a-cruise-ship/",
+      "file": "one-day-in-antigua-from-a-cruise-ship/index.html",
+      "kind": "guide"
+    },
+    {
+      "path": "/best-beaches-in-antigua-for-cruise-passengers/",
+      "file": "best-beaches-in-antigua-for-cruise-passengers/index.html",
+      "kind": "guide"
+    },
+    {
+      "path": "/can-you-explore-antigua-without-an-excursion/",
+      "file": "can-you-explore-antigua-without-an-excursion/index.html",
+      "kind": "decision"
+    },
+    {
+      "path": "/classic-beach-day/",
+      "file": "classic-beach-day/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/antigua-exclusive-history-and-culture-tour/",
+      "file": "antigua-exclusive-history-and-culture-tour/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/antigua-kayak-snorkel-and-beach/",
+      "file": "antigua-kayak-snorkel-and-beach/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/nelsons-dockyard-from-antigua-cruise-port/",
+      "file": "nelsons-dockyard-from-antigua-cruise-port/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/shirley-heights-antigua-guide/",
+      "file": "shirley-heights-antigua-guide/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/the-antiguan-experience/",
+      "file": "the-antiguan-experience/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/antigua-half-day-kayak-and-snorkel/",
+      "file": "antigua-half-day-kayak-and-snorkel/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/panoramic-antigua-and-beach-break/",
+      "file": "panoramic-antigua-and-beach-break/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/is-antigua-safe-for-cruise-passengers/",
+      "file": "is-antigua-safe-for-cruise-passengers/index.html",
+      "kind": "guide"
+    },
+    {
+      "path": "/contact/",
+      "file": "contact/index.html",
+      "kind": "trust"
+    },
+    {
+      "path": "/about/",
+      "file": "about/index.html",
+      "kind": "trust"
+    },
+    {
+      "path": "/privacy/",
+      "file": "privacy/index.html",
+      "kind": "trust"
+    },
+    {
+      "path": "/terms/",
+      "file": "terms/index.html",
+      "kind": "trust"
+    },
+    {
+      "path": "/methodology/",
+      "file": "methodology/index.html",
+      "kind": "trust"
+    },
+    {
+      "path": "/404.html",
+      "file": "404.html",
+      "kind": "error",
+      "sitemap": false
+    }
+  ]
+}

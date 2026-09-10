@@ -1,13 +1,19 @@
 {
   "name": "antigua-shore-excursion",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "build": "python3 scripts/build-antigua-site.py",
-    "images": "python3 scripts/fetch-antigua-images.py",
-    "deploy": "wrangler deploy",
+    "css": "tailwindcss -i ./css/input.css -o ./css/utilities.css --minify && cat css/utilities.css css/site.components.css > css/site.css && cat css/a11y.css >> css/site.css",
+    "build": "npm run css && python3 scripts/build-antigua-site.py",
+    "check": "python3 scripts/qa-antigua-site.py",
+    "deploy": "npm run build && npm run check && wrangler deploy",
     "preview": "python3 -m http.server 8907"
   },
   "devDependencies": {
+    "tailwindcss": "3.4.17",
     "wrangler": "^4.94.0"
   }
 }

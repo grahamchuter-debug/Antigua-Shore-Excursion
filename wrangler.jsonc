@@ -1,13 +1,25 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "antigua-shore-excursion",
+  "main": "worker.js",
   "compatibility_date": "2026-06-06",
+  "workers_dev": true,
   "observability": { "enabled": true },
-  "assets": { "directory": "." },
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "html_handling": "force-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": true
+  },
   "routes": [
     {
-      "pattern": "antiguashoreexcursion.com",
-      "custom_domain": true
+      "pattern": "antiguashoreexcursion.com/*",
+      "zone_name": "antiguashoreexcursion.com"
+    },
+    {
+      "pattern": "www.antiguashoreexcursion.com/*",
+      "zone_name": "antiguashoreexcursion.com"
     }
   ]
 }

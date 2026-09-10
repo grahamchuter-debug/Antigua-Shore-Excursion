@@ -1,157 +1,170 @@
-"""Antigua Shore Excursion site configuration."""
+"""Antigua Shore Excursion — World 2.0 Phase 15B site configuration."""
+from __future__ import annotations
+
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DOMAIN = "https://antiguashoreexcursion.com"
+
+DOMAIN = "antiguashoreexcursion.com"
+APEX = f"https://{DOMAIN}"
 SITE = "Antigua Shore Excursion"
-DATE = "2026-06-06"
+EMAIL = "hello@antiguashoreexcursion.com"
+DATE = "2026-09-10"
+ACCENT = "text-pr-400"
+
 FONTS = (
     "https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700"
     "&family=Source+Sans+3:wght@400;500;600;700&display=swap"
 )
+
 HERO_GRADIENT = (
-    "linear-gradient(135deg, rgba(37, 99, 235, 0.75) 0%, "
-    "rgba(249, 115, 22, 0.65) 50%, rgba(30, 58, 138, 0.55) 100%)"
+    "linear-gradient(140deg, rgba(15, 23, 42, 0.78) 0%, "
+    "rgba(30, 64, 175, 0.62) 42%, rgba(249, 115, 22, 0.38) 72%, "
+    "rgba(0, 0, 0, 0.22) 100%)"
 )
-ACCENT = "text-pr-300"
 
-HOME_HERO = "images/hero-antigua.png"
-HOME_HERO_ALT = (
-    "Turquoise Caribbean water and white sand beach in Antigua for cruise "
-    "passengers planning shore excursions from St John's cruise port"
+# Active Antigua-location assets only (see images/ATTRIBUTION.md).
+# Wrong-island / duplicate files live under images/quarantine/ and must not be referenced.
+HERO_HOME = "/images/hero-antigua.png"
+HERO_HOME_ALT = (
+    "Dickenson Bay beach in Antigua with turquoise Caribbean water "
+    "for cruise passengers planning shore time from St John's"
 )
-PORT_IMG = "images/antigua-cruise-port.png"
-PORT_ALT = (
-    "St John's Antigua cruise port with colourful harbour and cruise ships "
-    "docked for shore excursion passengers in Antigua and Barbuda"
+
+CRUISE_PORT = "/images/antigua-cruise-port.png"
+CRUISE_PORT_ALT = (
+    "St John's Antigua cruise harbour with ships and colourful waterfront "
+    "near Heritage Quay and Redcliffe Quay"
 )
-PORT_ARRIVAL_IMG = "images/antigua-port-arrival.png"
+
+PORT_ARRIVAL = "/images/antigua-port-arrival.png"
 PORT_ARRIVAL_ALT = (
-    "Cruise ship at St John's harbour Antigua with Heritage Quay and "
-    "Redcliffe Quay waterfront for cruise passenger port day planning"
+    "Cruise ship at St John's harbour Antigua for port-day arrival planning"
 )
-BEST_IMG = "images/best-antigua-excursions.png"
-BEST_ALT = (
-    "Nelson's Dockyard and Shirley Heights representing the best Antigua "
-    "shore excursions for cruise passengers from St John's port"
-)
-ONE_DAY_IMG = "images/one-day-antigua.png"
-ONE_DAY_ALT = (
-    "English Harbour and St John's Antigua coastline for planning a one-day "
-    "cruise ship shore excursion itinerary in Antigua and Barbuda"
-)
-INTRO_IMG = "images/antigua-intro.png"
+
+INTRO = "/images/antigua-intro.png"
 INTRO_ALT = (
-    "Antigua coastline with turquoise Caribbean water and tropical scenery "
-    "near St John's cruise port for beach and culture shore excursions"
+    "Antigua coastline with turquoise water and green hills "
+    "near typical shore-excursion routes from St John's"
 )
 
-ANTIGUAN_EXPERIENCE_IMG = "images/the-antiguan-experience.png"
-ANTIGUAN_EXPERIENCE_ALT = (
-    "Antigua countryside and cultural setting on The Antiguan Experience "
-    "shore excursion with pineapple farm visit from St John's cruise port"
-)
-CLASSIC_BEACH_IMG = "images/classic-beach-day.png"
-CLASSIC_BEACH_ALT = (
-    "White sand beach with calm turquoise water on Classic Beach Day "
-    "Antigua shore excursion for cruise passengers from St John's port"
-)
-KAYAK_SNORKEL_IMG = "images/antigua-kayak-snorkel.png"
-KAYAK_SNORKEL_ALT = (
-    "Kayaks in Antigua mangrove lagoon and snorkelers over reef on "
-    "Antigua Kayak Snorkel and Beach shore excursion from St John's"
-)
-HISTORY_CULTURE_IMG = "images/history-culture-tour.png"
-HISTORY_CULTURE_ALT = (
-    "Nelson's Dockyard English Harbour Antigua on Exclusive History and "
-    "Culture Tour shore excursion for St John's cruise passengers"
-)
-PANORAMIC_IMG = "images/panoramic-antigua.png"
-PANORAMIC_ALT = (
-    "Panoramic Antigua coastline viewpoint from Shirley Heights scenic "
-    "shore excursion with beach break for cruise passengers St John's"
-)
-HALF_DAY_KAYAK_IMG = "images/half-day-kayak-snorkel.png"
-HALF_DAY_KAYAK_ALT = (
-    "Half day kayak through mangrove lagoon and snorkel at Cades Reef "
-    "Antigua shore excursion for cruise passengers from St John's port"
-)
-
-NELSONS_DOCKYARD_IMG = "images/nelsons-dockyard.png"
-NELSONS_DOCKYARD_ALT = (
-    "Nelson's Dockyard UNESCO World Heritage site English Harbour Antigua "
-    "visited on history shore excursions from St John's cruise port"
-)
-SHIRLEY_HEIGHTS_IMG = "images/shirley-heights.png"
-SHIRLEY_HEIGHTS_ALT = (
-    "Shirley Heights military lookout overlooking English Harbour Antigua "
-    "for cruise passengers on Nelson's Dockyard and scenic island tours"
-)
-BEACHES_IMG = "images/antigua-beaches.png"
+BEACHES = "/images/antigua-beaches.png"
 BEACHES_ALT = (
-    "Hawksbill Bay white sand beach near St John's Antigua for cruise "
-    "passenger beach day shore excursions in Antigua and Barbuda"
-)
-CADES_REEF_IMG = "images/cades-reef.png"
-CADES_REEF_ALT = (
-    "Snorkeling over coral reef in clear Caribbean water at Cades Reef "
-    "Antigua on kayak and snorkel shore excursions from St John's port"
+    "Sea Grapes Beach at Hawksbill Bay Antigua — a west-coast beach "
+    "option often considered by cruise passengers"
 )
 
-ALL_IMAGES = [
-    HOME_HERO, PORT_IMG, PORT_ARRIVAL_IMG, BEST_IMG, ONE_DAY_IMG, INTRO_IMG,
-    ANTIGUAN_EXPERIENCE_IMG, CLASSIC_BEACH_IMG, KAYAK_SNORKEL_IMG,
-    HISTORY_CULTURE_IMG, PANORAMIC_IMG, HALF_DAY_KAYAK_IMG,
-    NELSONS_DOCKYARD_IMG, SHIRLEY_HEIGHTS_IMG, BEACHES_IMG, CADES_REEF_IMG,
-]
-
-SITEMAP_PAGES = [
-    ("", "1.0", "weekly"),
-    ("best-antigua-shore-excursions.html", "0.9", "monthly"),
-    ("antigua-port-guide.html", "0.8", "monthly"),
-    ("one-day-in-antigua-from-a-cruise-ship.html", "0.8", "monthly"),
-    ("best-beaches-in-antigua-for-cruise-passengers.html", "0.8", "monthly"),
-    ("nelsons-dockyard-from-antigua-cruise-port.html", "0.8", "monthly"),
-    ("shirley-heights-antigua-guide.html", "0.8", "monthly"),
-    ("is-antigua-safe-for-cruise-passengers.html", "0.8", "monthly"),
-    ("can-you-explore-antigua-without-an-excursion.html", "0.8", "monthly"),
-    ("the-antiguan-experience.html", "0.9", "monthly"),
-    ("classic-beach-day.html", "0.9", "monthly"),
-    ("antigua-kayak-snorkel-and-beach.html", "0.9", "monthly"),
-    ("antigua-exclusive-history-and-culture-tour.html", "0.9", "monthly"),
-    ("panoramic-antigua-and-beach-break.html", "0.9", "monthly"),
-    ("antigua-half-day-kayak-and-snorkel.html", "0.9", "monthly"),
-]
-
-SHIP_ICON = (
-    '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">'
-    '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" '
-    'd="M3 17h18M5 17l2-8h10l2 8M9 9l1-4h4l1 4"/></svg>'
+NELSONS = "/images/nelsons-dockyard.png"
+NELSONS_ALT = (
+    "Nelson's Dockyard at English Harbour Antigua, a UNESCO-listed "
+    "historic harbour visited on many south-coast day trips from St John's"
 )
 
-PLACEHOLDER_PNG = (
-    b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01"
-    b"\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15\xc4\x89"
-    b"\x00\x00\x00\nIDATx\x9cc\x00\x01\x00\x00\x05\x00\x01\r\n"
-    b"\xdb\x00\x00\x00\x00IEND\xaeB`\x82"
+HISTORY = "/images/history-culture-tour.png"
+HISTORY_ALT = (
+    "English Harbour and Nelson's Dockyard waterfront in Antigua "
+    "for history-focused cruise shore planning"
 )
 
-TOUR_PAGES = [
-    "the-antiguan-experience",
-    "classic-beach-day",
-    "antigua-kayak-snorkel-and-beach",
-    "antigua-exclusive-history-and-culture-tour",
-    "panoramic-antigua-and-beach-break",
-    "antigua-half-day-kayak-and-snorkel",
-]
+SHIRLEY = "/images/shirley-heights.png"
+SHIRLEY_ALT = (
+    "Shirley Heights lookout above English Harbour Antigua "
+    "with panoramic harbour and Caribbean views"
+)
 
-GUIDE_PAGES = [
-    "antigua-port-guide",
-    "one-day-in-antigua-from-a-cruise-ship",
-    "best-antigua-shore-excursions",
-    "best-beaches-in-antigua-for-cruise-passengers",
-    "nelsons-dockyard-from-antigua-cruise-port",
-    "shirley-heights-antigua-guide",
-    "is-antigua-safe-for-cruise-passengers",
-    "can-you-explore-antigua-without-an-excursion",
+EXPERIENCE = "/images/the-antiguan-experience.png"
+EXPERIENCE_ALT = (
+    "Antigua countryside scenery representing island sightseeing "
+    "and culture-and-beach style shore days from St John's"
+)
+
+# Honest stand-ins / CSS-only where no safe dedicated photo exists
+EXCURSIONS_HERO = NELSONS
+EXCURSIONS_HERO_ALT = NELSONS_ALT
+ONE_DAY_HERO = SHIRLEY
+ONE_DAY_HERO_ALT = SHIRLEY_ALT
+CLASSIC_BEACH_HERO = HERO_HOME
+CLASSIC_BEACH_HERO_ALT = HERO_HOME_ALT
+# Kayak / reef pages: no active wrong-island imagery — CSS-only heroes
+KAYAK_HERO = None
+HALF_DAY_KAYAK_HERO = None
+
+PROTECTED_ROUTES: list[dict] = [
+    {"path": "/", "file": "index.html", "kind": "home"},
+    {
+        "path": "/best-antigua-shore-excursions/",
+        "file": "best-antigua-shore-excursions/index.html",
+        "kind": "hub",
+    },
+    {
+        "path": "/antigua-port-guide/",
+        "file": "antigua-port-guide/index.html",
+        "kind": "guide",
+    },
+    {
+        "path": "/one-day-in-antigua-from-a-cruise-ship/",
+        "file": "one-day-in-antigua-from-a-cruise-ship/index.html",
+        "kind": "guide",
+    },
+    {
+        "path": "/best-beaches-in-antigua-for-cruise-passengers/",
+        "file": "best-beaches-in-antigua-for-cruise-passengers/index.html",
+        "kind": "guide",
+    },
+    {
+        "path": "/can-you-explore-antigua-without-an-excursion/",
+        "file": "can-you-explore-antigua-without-an-excursion/index.html",
+        "kind": "decision",
+    },
+    {
+        "path": "/classic-beach-day/",
+        "file": "classic-beach-day/index.html",
+        "kind": "attraction",
+    },
+    {
+        "path": "/antigua-exclusive-history-and-culture-tour/",
+        "file": "antigua-exclusive-history-and-culture-tour/index.html",
+        "kind": "attraction",
+    },
+    {
+        "path": "/antigua-kayak-snorkel-and-beach/",
+        "file": "antigua-kayak-snorkel-and-beach/index.html",
+        "kind": "attraction",
+    },
+    {
+        "path": "/nelsons-dockyard-from-antigua-cruise-port/",
+        "file": "nelsons-dockyard-from-antigua-cruise-port/index.html",
+        "kind": "attraction",
+    },
+    {
+        "path": "/shirley-heights-antigua-guide/",
+        "file": "shirley-heights-antigua-guide/index.html",
+        "kind": "attraction",
+    },
+    {
+        "path": "/the-antiguan-experience/",
+        "file": "the-antiguan-experience/index.html",
+        "kind": "attraction",
+    },
+    {
+        "path": "/antigua-half-day-kayak-and-snorkel/",
+        "file": "antigua-half-day-kayak-and-snorkel/index.html",
+        "kind": "attraction",
+    },
+    {
+        "path": "/panoramic-antigua-and-beach-break/",
+        "file": "panoramic-antigua-and-beach-break/index.html",
+        "kind": "attraction",
+    },
+    {
+        "path": "/is-antigua-safe-for-cruise-passengers/",
+        "file": "is-antigua-safe-for-cruise-passengers/index.html",
+        "kind": "guide",
+    },
+    {"path": "/contact/", "file": "contact/index.html", "kind": "trust"},
+    {"path": "/about/", "file": "about/index.html", "kind": "trust"},
+    {"path": "/privacy/", "file": "privacy/index.html", "kind": "trust"},
+    {"path": "/terms/", "file": "terms/index.html", "kind": "trust"},
+    {"path": "/methodology/", "file": "methodology/index.html", "kind": "trust"},
+    {"path": "/404.html", "file": "404.html", "kind": "error", "sitemap": False},
 ]

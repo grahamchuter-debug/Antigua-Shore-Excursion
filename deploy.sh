@@ -6,7 +6,10 @@ if [[ ! -f node_modules/.bin/wrangler ]]; then
   npm install
 fi
 
-echo "Deploying Antigua Shore Excursion to Cloudflare..."
+npm run build
+npm run check
+
+echo "Deploying Antigua Shore Excursion World 2.0 to Cloudflare..."
 npx wrangler deploy
 
-echo "Done. Check https://antiguashoreexcursion.com/ shortly."
+echo "Done. Check https://antiguashoreexcursion.com/"
