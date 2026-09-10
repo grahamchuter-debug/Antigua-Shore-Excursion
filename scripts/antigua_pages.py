@@ -37,8 +37,6 @@ from antigua_config import (
     SHIRLEY_ALT,
     SITE,
 )
-from typing import Any, Optional
-
 from antigua_shell import (
     cruise_snapshot,
     faq_section,
