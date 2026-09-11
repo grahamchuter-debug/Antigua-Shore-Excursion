@@ -1,0 +1,32 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "antigua-bookings-prod",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "antigua-bookings-prod",
+      "database_id": "1bd229e6-b81a-4ef5-b638-83043ecefba3",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "PAYMENTS_MODE": "live",
+    "BOOKINGS_ENABLED": "true",
+    "EMAIL_SENDING_ENABLED": "true",
+    "LIVE_PAYMENTS_UNLOCK": "ANTIGUA_LIVE_UNLOCK",
+    "EMAIL_FROM": "bookings@notifications.wowatour.com",
+    "EMAIL_FROM_NAME": "Antigua Shore Excursions",
+    "EMAIL_REPLY_TO": "hello@antiguashoreexcursion.com",
+    "CORS_ALLOWED_ORIGINS": "https://antiguashoreexcursion.com,https://www.antiguashoreexcursion.com",
+    "SITE_BASE_URL": "https://antiguashoreexcursion.com",
+    "ORIGINATING_SITE": "antiguashoreexcursion.com",
+    "ORIGINATING_PORT": "St John's, Antigua",
+    "OPERATOR_PORTAL_BASE_URL": "https://antigua-bookings-prod.dark-violet-8d91.workers.dev"
+  }
+}

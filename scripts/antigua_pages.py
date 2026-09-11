@@ -12,8 +12,6 @@ from antigua_config import (
     ACCENT,
     BEACHES,
     BEACHES_ALT,
-    CLASSIC_BEACH_HERO,
-    CLASSIC_BEACH_HERO_ALT,
     CRUISE_PORT,
     CRUISE_PORT_ALT,
     EMAIL,
@@ -1007,93 +1005,96 @@ def diy() -> PageTuple:
 
 
 # ---------------------------------------------------------------------------
-# CLASSIC BEACH DAY — editorial only
+# CLASSIC BEACH DAY — editorial + single-product RTB CTA (Phase 15D)
 # ---------------------------------------------------------------------------
 
 
 def classic_beach_day() -> PageTuple:
     hero = hero_band(
-        eyebrow="Editorial beach day",
-        title_html=f'Classic beach day<br/><span class="{ACCENT}">in Antigua</span>',
+        eyebrow="Antigua beach day",
+        title_html=f'Classic Beach Day<br/><span class="{ACCENT}">Fryes Beach</span>',
         lead=(
-            "How a simple Antigua beach-focused shore day fits a St John's cruise call — "
-            "pacing, who it suits, and what to confirm independently. Not a bookable product page."
+            "A 4-hour Antigua shore day at Fryes Beach — lunch, a non-alcoholic welcome drink, "
+            "and transport as part of the excursion. Request online; confirmation follows separately."
         ),
-        image=CLASSIC_BEACH_HERO,
-        aria_label=CLASSIC_BEACH_HERO_ALT,
+        image=None,
+        aria_label="Antigua Classic Beach Day — Fryes Beach shore excursion from St John's",
         breadcrumb="Classic beach day",
+        css_only=True,
         actions=_cta(
-            "/best-beaches-in-antigua-for-cruise-passengers/",
-            "Beach planning guide",
-            "/one-day-in-antigua-from-a-cruise-ship/",
-            "One-day scenarios",
+            "/book/classic-beach-day/",
+            "Book now",
+            "/best-antigua-shore-excursions/",
+            "Compare styles",
         ),
     )
 
     snap = cruise_snapshot(
         [
-            ("Role", "Relaxed swimming and shade-focused day"),
-            ("Best for", "Shorter calls; mixed energy levels"),
-            ("Transfer", "Usually shorter than English Harbour"),
-            ("Pairing", "Light quay time — not Dockyard + reef"),
-            ("This page", "Editorial only — no booking on this site"),
+            ("Beach", "Fryes Beach"),
+            ("Duration", "About 4 hours"),
+            ("Meeting", "Approx. 5–10 minute walk from the cruise ship pier"),
+            ("Price", "Guests (ages 3+) $77 · Infants (0–2) free"),
+            ("Booking", "Request online — confirmation emailed separately"),
         ]
     )
 
     main = f"""
 {_section(f'''
-<div class="grid lg:grid-cols-2 gap-12 items-start">
-  <div>
-    <div class="section-label">Why passengers ask</div>
-    <h2 class="text-2xl sm:text-3xl font-display font-bold text-gray-900 mb-4">Sun and sea without a marathon inland drive</h2>
-    <p class="text-gray-600 leading-relaxed mb-4">
-      A classic Antigua beach day is the answer when the ship’s clock is finite and the group’s
-      priority is swimming, shade and a calm lunch rather than stacking heritage stops.
-      Near-port beaches such as Dickenson Bay keep transfer risk lower; quieter cove-style days
-      may involve a longer coach or taxi ride — still usually less ambitious than English Harbour
-      plus a second major theme.
-    </p>
-    <p class="text-gray-600 leading-relaxed mb-4">
-      Booking is not offered on this website yet. If you arrange a beach day independently,
-      confirm the beach location, what is included, and how the return to St John's is timed —
-      with the operator and against your live all-aboard time.
-    </p>
-  </div>
-  <div class="info-image rounded-3xl overflow-hidden aspect-[4/3] shadow-lg">
-    <img src="{CLASSIC_BEACH_HERO}" alt="{CLASSIC_BEACH_HERO_ALT}" width="800" height="600" loading="lazy" decoding="async" />
-  </div>
+<div class="max-w-3xl">
+  <div class="section-label">Why passengers choose it</div>
+  <h2 class="text-2xl sm:text-3xl font-display font-bold text-gray-900 mb-4">Sun and sea without a marathon inland drive</h2>
+  <p class="text-gray-600 leading-relaxed mb-4">
+    Classic Beach Day is a relaxed Antigua shore excursion centred on <strong>Fryes Beach</strong>.
+    It suits cruise passengers who want swimming time, a calm lunch, and a simpler day than stacking
+    heritage stops or English Harbour with a second major theme.
+  </p>
+  <p class="text-gray-600 leading-relaxed mb-4">
+    Included as part of the excursion: lunch, a non-alcoholic welcome drink, and transport.
+    Optional Cades Reef boat/snorkel and optional water sports are at your own expense and are
+    <strong>not included</strong>. The day is not wheelchair accessible and involves moderate activity.
+  </p>
+  <p class="text-gray-600 leading-relaxed mb-6">
+    <a href="/book/classic-beach-day/" class="text-ocean-600 font-semibold">Book now</a>
+    to request places online. Payment creates a booking request — we confirm separately by email.
+    If we cannot confirm, you receive a full refund to your original payment method.
+  </p>
 </div>
 ''')}
 {_section(snap, pad="pb-8 pt-0")}
 {_prose('''
 <h2 class="text-2xl font-display font-bold text-gray-900 mb-4">Planning notes</h2>
 <ul class="space-y-3 text-gray-600 leading-relaxed mb-6">
-  <li>Ask where you will actually spend the beach hours — names and facilities change by season.</li>
-  <li>Clarify whether lunch, chairs or shade are included or paid locally.</li>
-  <li>Keep shopping as a light finish near the quays, not a third destination.</li>
-  <li>Protect a conservative return buffer; we do not claim ship-return guarantees.</li>
+  <li>Meeting is approximately a 5–10 minute walk from the cruise ship pier; exact instructions follow confirmation.</li>
+  <li>Free cancellation outside 14 days before your excursion. From the 14th day, bookings are non-refundable.</li>
+  <li>We do not invent beach furniture inclusion, live availability, or return-to-ship guarantees.</li>
+  <li>Protect a conservative return buffer against your live all-aboard time.</li>
 </ul>
 <p class="text-gray-600 leading-relaxed mb-4">
   Prefer viewpoints plus a swim? See
-  <a href="/panoramic-antigua-and-beach-break/" class="text-ocean-600 font-medium">panoramic Antigua and beach break</a>.
-  Prefer walking St John's instead? Use the
+  <a href="/panoramic-antigua-and-beach-break/" class="text-ocean-600 font-medium">panoramic Antigua and beach break</a>
+  (editorial). Prefer walking St John's instead? Use the
   <a href="/can-you-explore-antigua-without-an-excursion/" class="text-ocean-600 font-medium">DIY guide</a>.
 </p>
 ''' + related_links([
+    ("/book/classic-beach-day/", "Book Classic Beach Day"),
     ("/best-beaches-in-antigua-for-cruise-passengers/", "Beach guide"),
     ("/best-antigua-shore-excursions/", "Compare styles"),
     ("/antigua-port-guide/", "Port guide"),
-    ("/contact/", "Contact"),
 ]), bg="bg-sand-50")}
 {faq_section([
     (
         "Is a classic beach day good for cruise passengers?",
         "Yes when swimming and relaxed pacing matter more than covering the whole island. "
-        "Confirm location and timing live with any provider you choose.",
+        "This request-to-book product is based at Fryes Beach for about 4 hours.",
     ),
     (
         "Can I book this here?",
-        "Not in this phase. This is an editorial planning page only.",
+        "Yes. Use Book now to request Classic Beach Day. Payment creates a request; confirmation is emailed separately.",
+    ),
+    (
+        "Is Cades Reef included?",
+        "No. Optional Cades Reef boat/snorkel is at your own expense and is not included in Classic Beach Day.",
     ),
 ], heading="Classic beach day FAQ")}
 """
@@ -1102,23 +1103,27 @@ def classic_beach_day() -> PageTuple:
         (
             "Is a classic beach day good for cruise passengers?",
             "Yes when swimming and relaxed pacing matter more than covering the whole island. "
-            "Confirm location and timing live with any provider you choose.",
+            "This request-to-book product is based at Fryes Beach for about 4 hours.",
         ),
         (
             "Can I book this here?",
-            "Not in this phase. This is an editorial planning page only.",
+            "Yes. Use Book now to request Classic Beach Day. Payment creates a request; confirmation is emailed separately.",
+        ),
+        (
+            "Is Cades Reef included?",
+            "No. Optional Cades Reef boat/snorkel is at your own expense and is not included in Classic Beach Day.",
         ),
     ]
 
     meta: Meta = {
-        "title": "Classic Beach Day Antigua | Cruise Passenger Editorial Guide",
+        "title": "Classic Beach Day Antigua | Fryes Beach Shore Excursion",
         "description": (
-            "Editorial guide to a classic Antigua beach day from St John's — who it suits, "
-            "pacing tips and what to confirm independently. Not a booking page."
+            "Request Classic Beach Day at Fryes Beach from St John's — about 4 hours, lunch included. "
+            "Pay to request; confirmation emailed separately. Guests ages 3+ $77; infants free."
         ),
         "canonical_path": "/classic-beach-day/",
         "page_id": "classic-beach",
-        "og_image": CLASSIC_BEACH_HERO,
+        "og_image": None,
     }
     return hero, main, faqs, meta
 
